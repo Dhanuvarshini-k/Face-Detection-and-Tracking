@@ -8,9 +8,10 @@ while True:
     face=haarcascade.detectMultiScale(grayImg,1.3,4)#scaling factor and minimal facing pattern(passing them)
     for(x,y,w,h) in face:
         cv2.rectangle(img,(x,y),(x+w,y+h),(0,255,0),2)
-        cv2.imshow("FaceDetection",img)
-        key = cv2.waitKey(10)
+    cv2.imshow("FaceDetection",img)
+    key = cv2.waitKey(10)
     if key==27:
         break
 cam.release()
 cv2.destroyAllWindows()
+
